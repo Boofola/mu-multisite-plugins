@@ -1,16 +1,19 @@
 <?php
 
 /**
+ * @package Force-Settings-for-New-Sites
+ * @version 2.0.1
+ * 
  * Plugin Name: Force Settings for New Sites
  * Description: This plugin makes changes to the settings when a new site is created on a MU installation.
- * Plugin URI: https://boofolaworks.com/wp-plugins/force-mu-new-site-settings
- * Author: BoofolaWorks.com
- * Version: 1.0.2
- * Author URI: https://boofolaworks.com
+ * Plugin URI: https://boofolaworks.com/wordpress/plugins/mu-multisite-plugins/
+ * Version: 2.0.1
+ * Author: BOOFOLA LLC
+ * Author URI: https://boofolallc.com/
+ * License: GPLv2 or later
+ * Text Domain: mu-multisite-plugins
  *
- * Text Domain: boofolaworks
- *
- * @package BoofolaWorks
+ * @package BoofolaWorks Must-Use Multisite Plugins
  * @category Settings
  *
  * This plugin is created as free software: you can redistribute it and/or modify

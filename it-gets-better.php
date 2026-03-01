@@ -1,16 +1,31 @@
 <?php
+
 /**
- * @package It_Gets_Better
- * @version 1.1.0
+ * @package It-Gets-Better
+ * @version 2.0.1
+ * 
+ * Plugin Name: It Gets Better!
+ * Plugin URI: https://boofolaworks.com/wordpress/plugins/mu-multisite-plugins/
+ * Description: This is just a simple plugin, it tries to give hope while you work by randomly showing inspirational quotes in the upper right of your admin screen on every page.
+ * Version: 2.0.1
+ * Author: BOOFOLA LLC
+ * Author URI: https://boofolallc.com/
+ * License: GPLv2 or later
+ * Text Domain: mu-multisite-plugins
+ *
+ * @package BoofolaWorks Must-Use Multisite Plugins
+ * @category Settings
+ *
+ * This plugin is created as free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * This plugin is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
  */
-/*
-Plugin Name: It Get's Better!
-Plugin URI: https://boofola.com
-Description: This is just a simple plugin, it tries to give hope while you work by randomly showing inpirational quotes in the upper right of your admin screen on every page. An updated version of "Hello Dolly" by: 
-Author: Todd Stratton
-Version: 1.1.0
-Author URI: https://boofola.com
-*/
 
 function it_gets_better_get_quotes() {
 	/** These are the quotes to inspire! */
