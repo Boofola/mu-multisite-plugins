@@ -29,11 +29,13 @@
 
 /* Start Adding Functions Below this Line */
 
-add_action('activate_blog', 'wpse_271662_set_permalinks');
-function wpse_271662_set_permalinks() {
+add_action( 'wp_initialize_site', 'permalink_setter_set_permalinks' );
+function permalink_setter_set_permalinks( WP_Site $new_site ) {
+    switch_to_blog( $new_site->id );
     global $wp_rewrite;
-    $wp_rewrite->set_permalink_structure('/%postname%/');
+    $wp_rewrite->set_permalink_structure( '/%postname%/' );
     $wp_rewrite->flush_rules();
+    restore_current_blog();
 }
 
 /* Stop Adding Functions Below this Line */

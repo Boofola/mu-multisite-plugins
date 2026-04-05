@@ -39,8 +39,11 @@ add_action( 'wp_loaded', __NAMESPACE__ . '\init' );
 function init() {
 
     add_action(
-        'wpmu_new_blog',
-        function( $blog_id, $user_id ) {
+        'wp_initialize_site',
+        function( \WP_Site $new_site, array $args ) {
+
+            $blog_id = $new_site->id;
+            $user_id = isset( $args['user_id'] ) ? (int) $args['user_id'] : 0;
 
             switch_to_blog( $blog_id );
 
@@ -50,7 +53,6 @@ function init() {
                 update_option( 'show_on_front', 'page' );
                 update_option( 'page_on_front', $front_page_id );
             }
-
 
             update_option( 'date_format', date_format() );
             update_option( 'time_format', time_format() );
@@ -80,20 +82,20 @@ function front_page_data( $post_author ) {
     ];
 }
 
-add_action ('wpmu_new_blog', 'wpse296303_delete_wordpress_defaults', 100, 1);
+add_action( 'wp_initialize_site', __NAMESPACE__ . '\wpse296303_delete_wordpress_defaults', 100 );
 
-function wpse296303_delete_wordpress_defaults ($blog_id, $user_id, $domain, $path, $site_id, $meta) {
-  // Switch to the newly created blog
-  switch_to_blog ($blog_id);
-  // Delete 'Sample comment' page
-  wp_delete_comment (1, true);
-  // Delete 'Hello World!' post
-  wp_delete_post (1, true);
-  // Delete 'Sample page' page
-  wp_delete_post (2, true);
+function wpse296303_delete_wordpress_defaults( \WP_Site $new_site ) {
+    $blog_id = $new_site->id;
+    // Switch to the newly created blog
+    switch_to_blog( $blog_id );
+    // Delete 'Sample comment'
+    wp_delete_comment( 1, true );
+    // Delete 'Hello World!' post
+    wp_delete_post( 1, true );
+    // Delete 'Sample Page'
+    wp_delete_post( 2, true );
+    restore_current_blog();
 }
-
-  restore_current_blog();
 
 /**
  * Returns the custom date format

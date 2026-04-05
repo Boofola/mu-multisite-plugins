@@ -103,8 +103,7 @@ function boofola_wp_welcome_panel() {
             </ul>
         </div><!-- .welcome-panel-column welcome-panel-last -->
     </div><!-- .welcome-panel-column-container -->
-    <div>
-        <!-- .custom-welcome-panel-content -->
+    </div><!-- .custom-welcome-panel-content -->
 
         <?php }
 

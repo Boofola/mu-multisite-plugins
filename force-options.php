@@ -30,18 +30,7 @@
 /* Start Adding Functions Below this Line */
 
 // Force Uploads Use Yearmonth to off (0) for all existing sites in Multisites:
-
 add_filter( 'option_uploads_use_yearmonth_folders', '__return_false', 100 );
-
-
-/* Sets permalink structure for each blog activation */
-add_action('activate_blog', 'wpse_271662_set_permalinks');
-function wpse_271662_set_permalinks() {
-    global $wp_rewrite;
-    $wp_rewrite->set_permalink_structure('/%postname%/');
-    $wp_rewrite->flush_rules();
-}
-
 
 /* Stop Adding Functions Below this Line */
 ?>
