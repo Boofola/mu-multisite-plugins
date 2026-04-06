@@ -53,15 +53,15 @@ function boofola_wp_welcome_panel() {
 ?>
 
 <div class="custom-welcome-panel-content">
-    <h3><?php _e( 'Welcome to your custom dashboard Message!' ); ?></h3>
+    <h3><?php _e( 'Welcome to your MyBoofola Dashboard!' ); ?></h3>
     <p class="about-description">
-        <?php _e( 'Here you can place your custom text, give your customers instructions, place an ad or your contact information.' ); ?>
+        <?php _e( 'Here you can create and manage your content, customize your site, and explore various features.' ); ?>
     </p>
     <div class="welcome-panel-column-container">
         <div class="welcome-panel-column">
             <h4><?php _e( "Let's Get Started" ); ?></h4>
             <a class="button button-primary button-hero load-customize hide-if-no-customize"
-                href="http://your-website.com"><?php _e( 'Call me maybe !' ); ?></a>
+                href="https://myboofola.com"><?php _e( 'Call me maybe !' ); ?></a>
             <p class="hide-if-no-customize">
                 <?php printf( __( 'or, <a href="%s">edit your site settings</a>' ), admin_url( 'options-general.php' ) ); ?>
             </p>
@@ -103,9 +103,9 @@ function boofola_wp_welcome_panel() {
             </ul>
         </div><!-- .welcome-panel-column welcome-panel-last -->
     </div><!-- .welcome-panel-column-container -->
-    </div><!-- .custom-welcome-panel-content -->
+</div><!-- .custom-welcome-panel-content -->
 
-        <?php }
+<?php }
 
 add_action( 'welcome_panel', 'boofola_wp_welcome_panel' );
 

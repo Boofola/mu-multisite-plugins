@@ -4,7 +4,7 @@
  * @package Permalink_Setter
  * @version 2.0.1
  * 
- * Plugin name: Permalink Setter
+ * Plugin Name: Permalink Setter
  * Plugin URI: https://boofolaworks.com/wordpress/plugins/mu-multisite-plugins/
  * Description: Sets permalink structure for each blog activation
  * Version: 2.0.1

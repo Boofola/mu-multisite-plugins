@@ -42,8 +42,7 @@ if(!function_exists('add_action')){
 require_once plugin_dir_path(__FILE__) . 'mu-plugins/custom-dashboard-message.php';
 require_once plugin_dir_path(__FILE__) . 'mu-plugins/disable-annoying-email-notifications.php';
 require_once plugin_dir_path(__FILE__) . 'mu-plugins/force-new-site-options.php';
-require_once plugin_dir_path(__FILE__) . 'mu-plugins/force-options.php';
-require_once plugin_dir_path(__FILE__) . 'plugins/it-gets-better.php';
+require_once plugin_dir_path(__FILE__) . 'mu-plugins/it-gets-better.php';
 require_once plugin_dir_path(__FILE__) . 'mu-plugins/newblog_setter.php';
 require_once plugin_dir_path(__FILE__) . 'mu-plugins/permalink_setter.php'; 
 
