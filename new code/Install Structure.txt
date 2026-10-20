@@ -1,0 +1,10 @@
+wp-content/
+└── mu-plugins/
+    ├── mu-multisite-plugins.php
+    └── mu-multisite-plugins/
+        ├── custom-dashboard-message.php
+        ├── custom-login.php
+        ├── default-site-structure.php
+        ├── disable-annoying-email-notifications.php
+        ├── force-new-site-options.php
+        └── it-gets-better.php
