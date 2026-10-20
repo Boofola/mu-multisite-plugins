@@ -10,8 +10,8 @@ add_action( 'login_enqueue_scripts', function (): void {
         return;
     }
 
-    $bg_url   = esc_url( MUMultisiteOptions::get( 'login_bg_url' ) );
-    $logo_url = esc_url( MUMultisiteOptions::get( 'login_logo_url' ) );
+    $bg_url   = esc_url_raw( (string) MUMultisiteOptions::get( 'login_bg_url' ) );
+    $logo_url = esc_url_raw( (string) MUMultisiteOptions::get( 'login_logo_url' ) );
 
     ?>
     <style type="text/css">

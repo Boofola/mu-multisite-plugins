@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-add_action( 'init', function (): void {
+add_action( 'admin_init', function (): void {
     if ( MUMultisiteOptions::get( 'enable_custom_dashboard' ) ) {
         remove_action( 'welcome_panel', 'wp_welcome_panel' );
     }

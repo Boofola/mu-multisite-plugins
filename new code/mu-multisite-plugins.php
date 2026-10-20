@@ -62,12 +62,23 @@ final class MUMultisiteOptions {
     }
 
     public static function update_all( array $new_options ): bool {
+        $current_options = is_multisite() 
+            ? get_site_option( self::OPTION_KEY, self::get_defaults() ) 
+            : get_option( self::OPTION_KEY, self::get_defaults() );
+        $current_options = is_array( $current_options ) ? $current_options : [];
         $clean_options = [];
+
         foreach ( self::get_defaults() as $key => $default_val ) {
-            if ( is_bool( $default_val ) ) {
-                $clean_options[ $key ] = ! empty( $new_options[ $key ] );
+            if ( array_key_exists( $key, $new_options ) ) {
+                if ( is_bool( $default_val ) ) {
+                    $clean_options[ $key ] = ! empty( $new_options[ $key ] );
+                } elseif ( in_array( $key, [ 'login_bg_url', 'login_logo_url' ], true ) ) {
+                    $clean_options[ $key ] = sanitize_url( (string) $new_options[ $key ] );
+                } else {
+                    $clean_options[ $key ] = sanitize_text_field( (string) $new_options[ $key ] );
+                }
             } else {
-                $clean_options[ $key ] = sanitize_text_field( $new_options[ $key ] ?? $default_val );
+                $clean_options[ $key ] = $current_options[ $key ] ?? $default_val;
             }
         }
 
