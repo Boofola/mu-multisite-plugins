@@ -230,7 +230,7 @@ new MUMultisiteAdmin();
 $modules_dir = plugin_dir_path( __FILE__ ) . 'mu-multisite-plugins/';
 
 $modules = [
-    'boofola-custom-login.php',
+    'custom-login.php',
     'custom-dashboard-message.php',
     'disable-annoying-email-notifications.php',
     'force-new-site-options.php',
